@@ -14,7 +14,7 @@ points to a lack of coverage in the spec tests.
 Crosslink and Balances mismatch.
 
 ```
-bash$ zcli diff state post.ssz bad_zcli_post.ssz
+bash$ zcli diff state post.ssz bad_post_zcli.ssz
 BeaconState objects A and B are different:
 modified bytes: .CrosslinksState.CurrentCrosslinks[0].ParentRoot
 from = f4905dbaa6c8981445e359f32bbe528f840a587a5be7944fa8b267abcb8e9fb8
@@ -63,7 +63,7 @@ modified: .RegistryState.BalancesState.Balances[9], from = 0x773850f4a; to = 0x7
 Balances mismatch.
 
 ```
-bash$ zcli diff state post.ssz bad_artemis_post.ssz
+bash$ zcli diff state post.ssz bad_post_artemis.ssz
 BeaconState objects A and B are different:
 modified: .RegistryState.BalancesState.Balances[0], from = 0x773850f4a; to = 0x7737c5338
 modified: .RegistryState.BalancesState.Balances[10], from = 0x773716822; to = 0x7737a2434

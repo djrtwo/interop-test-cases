@@ -18,7 +18,7 @@ Lighthouse had correct crosslinks but rewards/penalties issues.
 Crosslink 7 and some balances mismatch.
 
 ```
-bash$ zcli diff state post.ssz bad_zcli_post.ssz 
+bash$ zcli diff state post.ssz bad_post_zcli.ssz 
 BeaconState objects A and B are different:
 modified: .CrosslinksState.CurrentCrosslinks[7].EndEpoch, from = 0x0; to = 0x1
 modified: .RegistryState.BalancesState.Balances[10], from = 0x7736e2199; to = 0x7737f99bd
@@ -37,7 +37,7 @@ modified: .RegistryState.BalancesState.Balances[7], from = 0x77370509d; to = 0x7
 Crosslink 7 and some balances mismatch.
 
 ```
-bash$ zcli diff state post.ssz bad_trinity_past.ssz 
+bash$ zcli diff state post.ssz bad_past_trinity.ssz 
 BeaconState objects A and B are different:
 modified: .CrosslinksState.CurrentCrosslinks[7].EndEpoch, from = 0x0; to = 0x1
 modified: .RegistryState.BalancesState.Balances[12], from = 0x77381c8c1; to = 0x77370509d
@@ -49,7 +49,7 @@ modified: .RegistryState.BalancesState.Balances[9], from = 0x77381c8c1; to = 0x7
 Balances mismatch.
 
 ```
-bash$ zcli diff state post.ssz bad_lighthouse_post.ssz 
+bash$ zcli diff state post.ssz bad_post_lighthouse.ssz 
 BeaconState objects A and B are different:
 modified: .RegistryState.BalancesState.Balances[0], from = 0x77381c8c1; to = 0x77370509d
 modified: .RegistryState.BalancesState.Balances[11], from = 0x77381c8c1; to = 0x77370509d
