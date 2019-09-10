@@ -4,7 +4,7 @@ State mismatch after the (1 -> 2) epoch transition. The attestations for shard
 from the previous epoch were included at the current epoch. Those and the ones
 from the current epoch are "competing" for the winning root for the crosslink.
 The previous epoch should be favored but some clients were favoring the current.
-There were also some both realted _and_ unrelated issues with rewards and penalties.
+There were also some both related _and_ unrelated issues with rewards and penalties.
 
 Trinity and ZCLI favored current epoch crosslink instead of previous epoch
 crosslink when picking winner. Also associated rewards/penalties issues.
