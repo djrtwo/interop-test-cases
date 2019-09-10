@@ -1,4 +1,4 @@
-# Artemis produced
+# Test case `artemis_16_crosslinks_and_balances`
 
 State mismatch after the (1 -> 2) epoch transition.
 
@@ -7,14 +7,14 @@ ZRNT has known issues wrt Crosslinks in ths below diff.
 Artemis passing state tests but having different balances in this transition
 points to a lack of coverage in the spec tests.
 
-## Know errors in clients
+## Diffs
 
 ### ZRNT
 
-Crosslink and Balances mismatch
+Crosslink and Balances mismatch.
 
-Diff with pyspec (A) and zrnt (B):
 ```
+bash$ zcli diff state post.ssz bad_zcli_post.ssz
 BeaconState objects A and B are different:
 modified bytes: .CrosslinksState.CurrentCrosslinks[0].ParentRoot
 from = f4905dbaa6c8981445e359f32bbe528f840a587a5be7944fa8b267abcb8e9fb8
@@ -60,10 +60,10 @@ modified: .RegistryState.BalancesState.Balances[9], from = 0x773850f4a; to = 0x7
 
 ### Artemis
 
-Balances mismatch
+Balances mismatch.
 
-Diff with pyspec (A) and Artemis (B):
 ```
+bash$ zcli diff state post.ssz bad_artemis_post.ssz
 BeaconState objects A and B are different:
 modified: .RegistryState.BalancesState.Balances[0], from = 0x773850f4a; to = 0x7737c5338
 modified: .RegistryState.BalancesState.Balances[10], from = 0x773716822; to = 0x7737a2434
